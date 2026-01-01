@@ -28,6 +28,11 @@ public class TestDatabaseConfig {
         System.setProperty("spring.datasource.url", originalJdbcUrl);
         System.setProperty("spring.datasource.username", mysqlContainer.getUsername());
         System.setProperty("spring.datasource.password", mysqlContainer.getPassword());
+
+        // 커넥션 풀 늘리기 - 2025.01.01 깃헙 액션 실행 중 빌드 에러 해결 위해 추가
+        System.setProperty("spring.datasource.hikari.maximum-pool-size", "100");
+        System.setProperty("spring.datasource.hikari.minimum-idle", "10");
+
     }
 
     @Bean
