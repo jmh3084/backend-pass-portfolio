@@ -31,8 +31,8 @@ public class TestDatabaseConfig {
 
         // 커넥션 풀 늘리기 - 2026.01.01 깃헙 액션 실행 중 빌드 에러 해결 위해 추가
         // 해당 코드 있음에도 빌드 실패 => 주석 처리 - 2026.01.03
-        //System.setProperty("spring.datasource.hikari.maximum-pool-size", "100");
-        //System.setProperty("spring.datasource.hikari.minimum-idle", "10");
+        System.setProperty("spring.datasource.hikari.maximum-pool-size", "100");
+        System.setProperty("spring.datasource.hikari.minimum-idle", "10");
 
     }
 
