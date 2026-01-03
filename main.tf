@@ -418,7 +418,7 @@ resource "aws_db_instance" "portfolio" {
   db_subnet_group_name   = aws_db_subnet_group.rds.name
   
   skip_final_snapshot    = true
-  publicly_accessible    = true
+  publicly_accessible    = false
   
   monitoring_interval = 60  # 60초마다 지표 수집
   monitoring_role_arn = aws_iam_role.rds_enhanced_monitoring.arn
