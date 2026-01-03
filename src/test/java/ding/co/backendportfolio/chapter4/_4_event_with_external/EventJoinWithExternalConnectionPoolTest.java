@@ -29,7 +29,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Slf4j
 @IntegrationTest
-// 커넥션 설정 - 2025.01.01 깃헙 액션 실행 중 빌드 에러 해결 위해 추가
+// 커넥션 설정 - 2026.01.01 깃헙 액션 실행 중 빌드 에러 해결 위해 추가
+// 해당 코드 있음에도 빌드 실패 => 주석 처리 - 2026.01.03
 @TestPropertySource(properties = {
         "spring.datasource.hikari.maximum-pool-size=32",
         "spring.datasource.hikari.minimum-idle=5"
